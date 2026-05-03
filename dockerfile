@@ -13,8 +13,8 @@ WORKDIR /build
 
 COPY requirements.txt .
 
-# Upgrade pip (CVE-2025-8869), wheel (CVE-2026-24049), and setuptools (CVE-2026-23949
-# via vendored jaraco.context) before installing deps
+# Upgrade pip (CVE-2025-8869), wheel (CVE-2026-24049), and
+# setuptools (CVE-2026-23949; via vendored jaraco.context) before installing deps
 RUN pip install --no-cache-dir --upgrade \
         pip==25.3 \
         wheel==0.46.2 \
