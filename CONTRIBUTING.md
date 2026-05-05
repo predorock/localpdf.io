@@ -1,19 +1,19 @@
-# Contribuindo para o LocalPDF.io
+# Contributing to LocalPDF.io
 
-Obrigado por considerar contribuir! 🎉
+Thank you for considering contributing! 🎉
 
-## Como Contribuir
+## How to Contribute
 
-### 1. Fork o Projeto
+### 1. Fork the project
 
-- Faça um fork do repositório
-- Clone o fork para sua máquina
+- Fork the repository
+- Clone your fork locally
 
-#### Configure o Ambiente
+#### Set up the environment
 
-Para garantir a qualidade do código, utilizamos ferramentas como `ruff` e `pre-commit`.
+We use `ruff` and `pre-commit` to keep code quality consistent.
 
-1. **Crie um ambiente virtual (Recomendado)**
+1. **Create a virtual environment (recommended)**
 
     ```bash
     python -m venv venv
@@ -23,132 +23,130 @@ Para garantir a qualidade do código, utilizamos ferramentas como `ruff` e `pre-
     source venv/bin/activate
     ```
 
-2. **Instale as dependências**
+2. **Install dependencies**
 
     ```bash
     pip install -r requirements.txt
     pip install -r requirements_dev.txt
     ```
 
-3. **Instale os hooks do pre-commit**
+3. **Install pre-commit hooks**
 
-    Isso garantirá que verificações automáticas rodem antes de cada commit.
+    This ensures automatic checks run before every commit.
 
     ```bash
     pre-commit install
     ```
 
-### 2. Crie uma Branch
+### 2. Create a branch
 
 ```bash
-git checkout -b feature/minha-contribuicao
+git checkout -b feature/my-contribution
 ```
 
-### 3. Faça suas Alterações
+### 3. Make your changes
 
-- Escreva código limpo e comentado
-- Teste suas mudanças localmente
-- Certifique-se de que tudo funciona
+- Write clean, commented code
+- Test your changes locally
+- Make sure everything works
 
-### 4. Commit suas Mudanças
+### 4. Commit your changes
 
 ```bash
 git add .
-git commit -m "Adiciona: descrição da sua contribuição"
+git commit -m "feat: description of your contribution"
 ```
 
-Use mensagens de commit descritivas:
+Use descriptive commit messages:
 
-- `Adiciona: nova funcionalidade X`
-- `Corrige: bug na conversão Y`
-- `Melhora: performance da função Z`
-- `Documenta: atualiza README`
+- `feat: add new feature X`
+- `fix: bug in conversion Y`
+- `perf: improve performance of function Z`
+- `docs: update README`
 
-### 5. Push para o GitHub
+### 5. Push to GitHub
 
 ```bash
-git push origin feature/minha-contribuicao
+git push origin feature/my-contribution
 ```
 
-### 6. Abra um Pull Request
+### 6. Open a Pull Request
 
-- Vá até o repositório original
-- Clique em "New Pull Request"
-- Descreva suas mudanças claramente
+- Go to the original repository
+- Click "New Pull Request"
+- Describe your changes clearly
 
-## O que Contribuir?
+## What to contribute
 
 ### 🐛 Bugs
 
-Encontrou um bug? Abra uma issue descrevendo:
+Found a bug? Open an issue describing:
 
-- O que você esperava que acontecesse
-- O que aconteceu
-- Passos para reproduzir
-- Prints/logs se possível
+- What you expected to happen
+- What actually happened
+- Steps to reproduce
+- Screenshots/logs if possible
 
-### ✨ Novas Funcionalidades
+### ✨ New features
 
-Ideias de novas funcionalidades:
+Ideas for new features:
 
-- Novos formatos de conversão
-- Melhorias na interface
-- Otimizações de performance
-- Testes automatizados
-- Internacionalização (i18n)
+- New conversion formats
+- UI improvements
+- Performance optimizations
+- Automated tests
+- Internationalization (i18n)
 
-### 📚 Documentação
+### 📚 Documentation
 
-- Melhorar o README
-- Adicionar exemplos de uso
-- Corrigir typos
-- Traduzir documentação
+- Improve the README
+- Add usage examples
+- Fix typos
+- Translate documentation
 
 ### 🎨 Design
 
-- Melhorar a interface
-- Adicionar tema escuro
-- Tornar responsivo
-- Melhorar UX
+- Improve the interface
+- Add dark mode
+- Make it responsive
+- Improve UX
 
-## Diretrizes de Código
+## Code guidelines
 
-- Mantenha o código Python seguindo PEP 8
-- Comente código complexo
-- Teste suas mudanças antes de enviar
-- Mantenha a simplicidade
+- Follow PEP 8 for Python code
+- Comment complex code
+- Test your changes before submitting
+- Keep it simple
 
-## 🎖️ Reconhecimento de Contribuidores
+## 🎖️ Contributor recognition
 
-Usamos o [All Contributors Bot](https://allcontributors.org/) para reconhecer todas as contribuições!
+We use the [All Contributors Bot](https://allcontributors.org/) to recognize all contributions!
 
-### Como ser adicionado como contribuidor
+### How to be added as a contributor
 
-Após sua contribuição ser aceita, você ou um mantenedor pode comentar:
+After your contribution is accepted, you or a maintainer can comment:
 
 ```
-@all-contributors please add @seu-username for code
+@all-contributors please add @your-username for code
 ```
 
-**Tipos de contribuição reconhecidos:**
+**Recognized contribution types:**
 
-- `code` - Código
-- `doc` - Documentação
-- `design` - Design
-- `bug` - Reportar bugs
-- `ideas` - Ideias
-- `review` - Revisar PRs
-- E muitos mais! (veja [docs/BOT_USAGE.md](docs/BOT_USAGE.md))
+- `code` — Code
+- `doc` — Documentation
+- `design` — Design
+- `bug` — Bug reports
+- `ideas` — Ideas
+- `review` — PR reviews
+- And many more! (see [docs/BOT_USAGE.md](docs/BOT_USAGE.md))
 
-O bot criará automaticamente um PR adicionando você à lista de contribuidores! ✨
+The bot will automatically create a PR adding you to the contributors list! ✨
 
-## Dúvidas?
+## Questions?
 
-Entre em contato:
-
+- Open an issue on GitHub
 - Email: <virgilio.junior94@gmail.com>
-- Abra uma issue no GitHub
 
 ---
 
-**Toda contribuição é bem-vinda, não importa o tamanho!** ⭐
+**Every contribution is welcome, no matter the size!** ⭐
