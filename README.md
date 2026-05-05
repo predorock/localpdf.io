@@ -1,3 +1,9 @@
+<div align="right">
+
+🌐 **Language** | **English** · [Português 🇧🇷](README.pt-br.md)
+
+</div>
+
 <div align="center">
 
 # 🌟 LocalPDF.io
