@@ -75,7 +75,7 @@ cd localpdf.io
 pip install -r requirements.txt
 # Instale o Ghostscript e Tesseract no sistema
 # Debian/Ubuntu:
-apt-get install ghostscript tesseract-ocr tesseract-ocr-por
+apt-get install ghostscript tesseract-ocr tesseract-ocr-por tesseract-ocr-eng
 
 # Execute a aplicação
 python app.py
