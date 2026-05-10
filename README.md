@@ -37,11 +37,13 @@ No accounts. No cloud. No data leaving your computer.
 
 ## ✨ Features
 
-### 📥 Convert to PDF
-- **🖼️ Images → PDF** — Combine multiple JPG/PNG images into a single PDF
-- **📝 Word → PDF** — Convert one or multiple DOCX files into a PDF
-- **📊 Excel → PDF** — Transform XLSX spreadsheets into PDF
-- **📄 Text → PDF** — Convert TXT files into a formatted PDF
+### 📤 Converter de PDF
+- **🖼️ PDF → Imagens** - Extraia cada página como imagem PNG
+- **📝 PDF → Word** - Converta PDF em documento DOCX editável
+- **📊 PDF → Excel** - Extraia tabelas para planilhas XLSX
+- **📄 PDF → Texto** - Extraia todo o texto em arquivo TXT
+- **🔒 PDF → PDF/A** - Converta para o padrão de arquivamento (PDF/A-1b)
+- **🔍 OCR em PDF** - Extraia texto de PDFs e imagens escaneadas com Tesseract OCR (português e inglês)
 
 ### 📤 Convert from PDF
 - **🖼️ PDF → Images** — Extract each page as a PNG image
@@ -83,7 +85,9 @@ git clone https://github.com/virgiliojr94/localpdf.io.git
 cd localpdf.io
 
 pip install -r requirements.txt
-# Ghostscript is required: sudo apt-get install ghostscript
+# Instale o Ghostscript e Tesseract no sistema
+# Debian/Ubuntu:
+apt-get install ghostscript tesseract-ocr tesseract-ocr-por tesseract-ocr-eng
 
 python app.py
 ```
@@ -92,15 +96,14 @@ Open: **http://localhost:5000**
 
 ## 🛠️ Tech stack
 
-| Library | Purpose |
-|---------|---------|
-| Flask | Web framework |
-| PyMuPDF | PDF manipulation |
-| Pillow | Image processing |
-| python-docx | Word document handling |
-| ReportLab | PDF generation |
-| OpenPyXL | Excel spreadsheet handling |
-| PDF2Docx | PDF → DOCX conversion |
+- **Flask** - Framework web Python
+- **PyMuPDF** - Manipulação de PDFs
+- **Pillow** - Processamento de imagens
+- **python-docx** - Manipulação de arquivos Word
+- **ReportLab** - Geração de PDFs
+- **OpenPyXL** - Manipulação de planilhas Excel
+- **PDF2Docx** - Conversor de PDF para Docx
+- **Tesseract OCR** - Reconhecimento óptico de caracteres
 
 ## 🔒 Privacy
 

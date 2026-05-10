@@ -31,6 +31,9 @@ LABEL maintainer="localpdf.io"
 # ghostscript is a runtime dependency; no build tools kept
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ghostscript \
+    tesseract-ocr \
+    tesseract-ocr-por \
+    tesseract-ocr-eng \
     && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip/wheel/setuptools in runtime stage so old base-image metadata
