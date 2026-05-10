@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     ghostscript \
     tesseract-ocr \
     tesseract-ocr-por \
+    tesseract-ocr-eng \
     && rm -rf /var/lib/apt/lists/*
 
 # Definir diretório de trabalho
