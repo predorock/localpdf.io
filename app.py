@@ -843,10 +843,9 @@ def ocr_pdf(file, temp_dir):
         for page_num in range(len(doc)):
             page = doc.load_page(page_num)
             pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))  # 2x resolução
-            img_path = os.path.join(temp_dir, f"ocr_page_{page_num + 1}.png")
-            pix.save(img_path)
-
-            img = Image.open(img_path)
+            # Converter Pixmap diretamente para bytes em memória e aplicar OCR sem salvar em disco
+            img_bytes = pix.tobytes("png")
+            img = Image.open(io.BytesIO(img_bytes))
             text = pytesseract.image_to_string(img, lang="por+eng")
             extracted_text.append(f"--- Página {page_num + 1} ---\n{text}")
         doc.close()
