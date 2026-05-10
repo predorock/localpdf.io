@@ -1,3 +1,9 @@
+<div align="right">
+
+🌐 **Language** | **English** · [Português 🇧🇷](README.pt-br.md)
+
+</div>
+
 <div align="center">
 
 # 🌟 LocalPDF.io
@@ -7,33 +13,29 @@
 [![Flask](https://img.shields.io/badge/Flask-2.3.3-green.svg)](https://flask.palletsprojects.com/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![All Contributors](https://img.shields.io/github/all-contributors/virgiliojr94/localpdf.io?color=ee8449&style=flat-square)](#-contribuidores)
+[![All Contributors](https://img.shields.io/github/all-contributors/virgiliojr94/localpdf.io?color=ee8449&style=flat-square)](#-contributors)
 [![Website](https://img.shields.io/badge/Website-Online-success.svg)](https://virgiliojr94.github.io/localpdf.io/)
 
-> Todas as ferramentas PDF que você precisa, 100% local e privado
+> Every PDF tool you need — 100% local, 100% private.
 
-**🌐 [Visite o Site Oficial](https://virgiliojr94.github.io/localpdf.io/)**
+**🌐 [Visit the Official Website](https://virgiliojr94.github.io/localpdf.io/)**
 
-[Funcionalidades](#-funcionalidades) •
-[Como Usar](#-como-usar) •
-[Contribuir](CONTRIBUTING.md) •
-[Licença](#-licença)
+[Features](#-features) •
+[Usage](#-usage) •
+[Contributing](CONTRIBUTING.md) •
+[License](#-license)
 
 </div>
 
 ---
 
-## 📋 O que é?
+## 📋 What is it?
 
-LocalPDF.io é uma aplicação web local para manipulação de arquivos PDF e documentos. Todos os arquivos são processados no seu próprio computador - nada é enviado para a nuvem.
+LocalPDF.io is a self-hosted web app for PDF and document manipulation. Every file is processed on your own machine — nothing is uploaded to any server.
 
-## ✨ Funcionalidades
+No accounts. No cloud. No data leaving your computer.
 
-### 📥 Converter para PDF
-- **🖼️ Imagens → PDF** - Combine múltiplas imagens (JPG, PNG) em um PDF
-- **📝 Word → PDF** - Converta um ou vários documentos DOCX em PDF único
-- **📊 Excel → PDF** - Transforme planilhas XLSX em PDF
-- **📄 Texto → PDF** - Converta arquivos TXT em PDF formatado
+## ✨ Features
 
 ### 📤 Converter de PDF
 - **🖼️ PDF → Imagens** - Extraia cada página como imagem PNG
@@ -43,47 +45,56 @@ LocalPDF.io é uma aplicação web local para manipulação de arquivos PDF e do
 - **🔒 PDF → PDF/A** - Converta para o padrão de arquivamento (PDF/A-1b)
 - **🔍 OCR em PDF** - Extraia texto de PDFs e imagens escaneadas com Tesseract OCR (português e inglês)
 
-### 🔄 Manipular PDF
-- **🔗 Mesclar PDFs** - Una vários PDFs em um único documento
-- **✂️ Dividir PDF** - Separe cada página em arquivo individual
-- **📦 Comprimir PDF** - Reduza o tamanho mantendo a qualidade
+### 📤 Convert from PDF
+- **🖼️ PDF → Images** — Extract each page as a PNG image
+- **📝 PDF → Word** — Convert PDF into an editable DOCX document
+- **📊 PDF → Excel** — Extract tables into an XLSX spreadsheet
+- **📄 PDF → Text** — Extract all text into a TXT file
+- **🔒 PDF → PDF/A** — Convert to archival standard (PDF/A-1b)
 
-## 🚀 Como usar
+### 🔄 Manipulate PDF
+- **🔗 Merge PDFs** — Combine multiple PDFs into one document
+- **✂️ Split PDF** — Separate each page into individual files
+- **📦 Compress PDF** — Reduce file size while preserving quality
 
-### Com Docker (Recomendado)
+## 🚀 Usage
+
+### With Docker (Recommended)
+
+#### Pull and run (fastest)
 
 ```bash
-# Clone o repositório
+docker run -p 5000:5000 ghcr.io/virgiliojr94/localpdf.io:latest
+```
+
+#### Build locally
+
+```bash
 git clone https://github.com/virgiliojr94/localpdf.io.git
 cd localpdf.io
-
-# Execute com Docker
 docker build -t localpdf .
 docker run -p 5000:5000 localpdf
 ```
 
-Acesse: **http://localhost:5000**
+Open: **http://localhost:5000**
 
-### Sem Docker
+### Without Docker
 
 ```bash
-# Clone o repositório
 git clone https://github.com/virgiliojr94/localpdf.io.git
 cd localpdf.io
 
-# Instale as dependências
 pip install -r requirements.txt
 # Instale o Ghostscript e Tesseract no sistema
 # Debian/Ubuntu:
 apt-get install ghostscript tesseract-ocr tesseract-ocr-por tesseract-ocr-eng
 
-# Execute a aplicação
 python app.py
 ```
 
-Acesse: **http://localhost:5000**
+Open: **http://localhost:5000**
 
-## 🛠️ Tecnologias
+## 🛠️ Tech stack
 
 - **Flask** - Framework web Python
 - **PyMuPDF** - Manipulação de PDFs
@@ -94,40 +105,29 @@ Acesse: **http://localhost:5000**
 - **PDF2Docx** - Conversor de PDF para Docx
 - **Tesseract OCR** - Reconhecimento óptico de caracteres
 
-## 🔒 Privacidade
+## 🔒 Privacy
 
-Todos os arquivos são processados **localmente** no seu computador. Nenhum dado é enviado para servidores externos.
+All files are processed **locally** on your machine. No data is sent to external servers — ever.
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-Contribuições são muito bem-vindas! Veja o [guia de contribuição](CONTRIBUTING.md) para começar.
+Contributions are welcome! See the [contribution guide](CONTRIBUTING.md) to get started.
 
-## 👥 Contribuidores
+## 👥 Contributors
 
-Obrigado a todas essas pessoas incríveis que contribuíram para este projeto! ✨
+Thanks to everyone who has contributed to this project! ✨
 
 <a href="https://github.com/virgiliojr94/localpdf.io/graphs/contributors">
-  <img alt="Contribuidores do repositório" src="https://contrib.rocks/image?repo=virgiliojr94/localpdf.io" />
+  <img alt="Repository contributors" src="https://contrib.rocks/image?repo=virgiliojr94/localpdf.io" />
 </a>
 
-Contribuições de qualquer tipo são bem-vindas!
+## 📝 License
 
-## 📝 Licença
-
-MIT License - Sinta-se livre para usar e modificar!
-
-## 👨‍💻 Desenvolvedor
-
-**Virgilio Borges**
-
-- 📧 Email: virgilio.junior94@gmail.com
-- 📱 WhatsApp: (95) 98112-1572
-- 🔗 GitHub: [@virgiliojr94](https://github.com/virgiliojr94)
-- 💼 LinkedIn: [virgiliojunior94](https://www.linkedin.com/in/virgiliojunior94/)
+MIT License — free to use and modify.
 
 ---
 
-⭐ Se este projeto foi útil para você, considere dar uma estrela no GitHub!
+⭐ If this project was useful to you, consider giving it a star on GitHub!
 
 ## :star2: Star History
 
