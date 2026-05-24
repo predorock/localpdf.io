@@ -44,18 +44,38 @@
         .footer a:hover { text-decoration: underline; }
         .social-icons { margin-top: 10px; }
         .social-icons a { margin: 0 10px; color: #667eea; font-size: 1.2em; }
-        .lang-switcher { text-align: right; margin-bottom: 10px; }
-        .lang-switcher select { padding: 8px 15px; border-radius: 20px; border: none; background: rgba(255,255,255,0.9); color: #333; font-size: 1em; cursor: pointer; }
+        .lang-switcher { position: relative; display: flex; justify-content: flex-end; margin-bottom: 10px; }
+        .lang-toggle { display: flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 25px; border: none; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; font-size: 0.95em; cursor: pointer; transition: background 0.2s ease; }
+        .lang-toggle:hover { background: rgba(255,255,255,0.25); }
+        .lang-toggle .arrow { font-size: 0.7em; transition: transform 0.2s ease; }
+        .lang-toggle.open .arrow { transform: rotate(180deg); }
+        .lang-dropdown { position: absolute; top: calc(100% + 6px); right: 0; background: white; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.18); overflow: hidden; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.2s ease; z-index: 100; min-width: 160px; }
+        .lang-dropdown.open { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-option { display: flex; align-items: center; gap: 10px; padding: 12px 18px; cursor: pointer; color: #333; font-size: 0.95em; transition: background 0.15s ease; border: none; background: none; width: 100%; text-align: left; }
+        .lang-option:hover { background: #f0f4ff; }
+        .lang-option.active { background: #eef2ff; font-weight: 600; color: #667eea; }
+        .lang-option .flag { font-size: 1.3em; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="lang-switcher">
-            <select id="lang-select" onchange="changeLanguage(this.value)">
-                <option value="en" {% if get_locale() == 'en' %}selected{% endif %}>🇬🇧 English</option>
-                <option value="it" {% if get_locale() == 'it' %}selected{% endif %}>🇮🇹 Italiano</option>
-                <option value="pt" {% if get_locale() == 'pt' %}selected{% endif %}>🇧🇷 Português</option>
-            </select>
+            <button class="lang-toggle" id="lang-toggle" onclick="toggleLangDropdown()">
+                <span class="flag">{% if get_locale() == 'en' %}🇬🇧{% elif get_locale() == 'it' %}🇮🇹{% else %}🇧🇷{% endif %}</span>
+                <span>{% if get_locale() == 'en' %}English{% elif get_locale() == 'it' %}Italiano{% else %}Português{% endif %}</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="lang-dropdown" id="lang-dropdown">
+                <button class="lang-option {% if get_locale() == 'en' %}active{% endif %}" onclick="changeLanguage('en')">
+                    <span class="flag">🇬🇧</span> English
+                </button>
+                <button class="lang-option {% if get_locale() == 'it' %}active{% endif %}" onclick="changeLanguage('it')">
+                    <span class="flag">🇮🇹</span> Italiano
+                </button>
+                <button class="lang-option {% if get_locale() == 'pt' %}active{% endif %}" onclick="changeLanguage('pt')">
+                    <span class="flag">🇧🇷</span> Português
+                </button>
+            </div>
         </div>
         <div class="header">
             <h1>🌟 LocalPDF.io</h1>
@@ -155,6 +175,18 @@
 
     <script>
         const currentLang = '{{ get_locale() }}';
+
+        function toggleLangDropdown() {
+            document.getElementById('lang-toggle').classList.toggle('open');
+            document.getElementById('lang-dropdown').classList.toggle('open');
+        }
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.lang-switcher')) {
+                document.getElementById('lang-toggle').classList.remove('open');
+                document.getElementById('lang-dropdown').classList.remove('open');
+            }
+        });
 
         function changeLanguage(lang) {
             window.location.href = '/?lang=' + lang;
